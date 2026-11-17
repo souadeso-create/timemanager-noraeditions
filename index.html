@@ -705,6 +705,23 @@
   #tarifs .tarif-espace ul { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 24px; }
   @media (min-width: 760px) { #tarifs .plus-tarif { left: -46px; top: 50%; margin: -38px 0 0 0; } #tarifs .tarifs { column-gap: 34px; } }
 </style>
+<script src="https://creation-site-internet.noraeditions.fr/medias/chat.js" defer></script>
+<style>
+  /* le « + » entre la création et l'abonnement : au-dessus sur téléphone, à gauche quand les tarifs sont côte à côte */
+  #tarifs .tarif-plus { position: relative; overflow: visible; }
+  #tarifs .plus-tarif { position: absolute; z-index: 3; left: 50%; top: -50px; width: 76px; height: 76px; margin-left: -38px;
+    border-radius: 50%; background: #ffd426; border: 4px solid #fff; font-size: 0; color: transparent !important;
+    box-shadow: 0 6px 0 #a65f00, 0 14px 26px rgba(0,0,0,.3); pointer-events: none; }
+  /* le « + » dessiné : deux barres épaisses */
+  #tarifs .plus-tarif::before, #tarifs .plus-tarif::after { content: ""; position: absolute; left: 50%; top: 50%; background: #0f1240; border-radius: 6px; }
+  #tarifs .plus-tarif::before { width: 38px; height: 11px; margin: -5.5px 0 0 -19px; }
+  #tarifs .plus-tarif::after { width: 11px; height: 38px; margin: -19px 0 0 -5.5px; }
+  #tarifs .tarifs { row-gap: 40px; }
+  /* l'espace client en option : sur toute la largeur, sous les quatre encadrés */
+  #tarifs .tarif-espace { grid-column: 1 / -1; }
+  #tarifs .tarif-espace ul { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px 24px; }
+  @media (min-width: 760px) { #tarifs .plus-tarif { left: -46px; top: 50%; margin: -38px 0 0 0; } #tarifs .tarifs { column-gap: 34px; } }
+</style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Time Manager", "url": "https://timemanager.noraeditions.fr/", "inLanguage": "fr", "publisher": {"@type": "Organization", "name": "Nora Éditions", "url": "https://creation-site-internet.noraeditions.fr/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Time Manager", "serviceType": "Prise de rendez-vous en ligne pour salon de coiffure, institut de beauté, onglerie et barbier", "description": "Time Manager : vos clientes réservent sur le site de votre salon, paient un acompte si vous le souhaitez. Coiffure, institut, onglerie, barbier. Sans commission.", "url": "https://timemanager.noraeditions.fr/", "areaServed": {"@type": "Country", "name": "France"}, "provider": {"@type": "Organization", "name": "Nora Éditions", "url": "https://creation-site-internet.noraeditions.fr/", "email": "contact@noraeditions.com"}, "offers": {"@type": "Offer", "price": "490", "priceCurrency": "EUR", "url": "https://timemanager.noraeditions.fr/", "description": "Formule Pro : 490 €, puis 29 € par mois"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Il y a une commission sur les réservations ?", "acceptedAnswer": {"@type": "Answer", "text": "Pas de notre part. Seul Stripe prend ses frais sur chaque paiement en ligne, comme une banque."}}, {"@type": "Question", "name": "Mes clientes peuvent payer sur place ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui : en ligne, sur place, ou un acompte en ligne et le reste sur place. C'est vous qui choisissez."}}, {"@type": "Question", "name": "Comment limiter les rendez-vous manqués ?", "acceptedAnswer": {"@type": "Answer", "text": "Le rappel de la veille est prêt à envoyer, un acompte peut être demandé à la réservation, et la règle d'annulation est lue avant de réserver."}}, {"@type": "Question", "name": "Faut-il envoyer une facture à chaque cliente ?", "acceptedAnswer": {"@type": "Answer", "text": "Non. La cliente paie sur place et reçoit un ticket. La facture n'est remise que si elle la demande."}}, {"@type": "Question", "name": "Combien ça coûte ?", "acceptedAnswer": {"@type": "Answer", "text": "La prise de rendez-vous en ligne est dans la formule Pro : 490 €, puis 29 € par mois, avec le site et l'application."}}, {"@type": "Question", "name": "Je dois créer un compte Stripe ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui, pour que l'argent arrive directement chez vous. Si vous n'en avez pas, nous vous aidons à le créer."}}]}</script>
